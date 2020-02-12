@@ -25,3 +25,16 @@ var mostPopularFood = [
 // Output them in a tidy top-ten fashion in the console.
 
 // NO for loops!
+
+mostPopularFood[8]=('buffalo-flavored cauliflower');
+
+//or just mostPopularFood.unshift('bean burritos');
+mostPopularFood.reverse();
+mostPopularFood.push('bean burritos');
+mostPopularFood.reverse();
+
+mostPopularFood.forEach((food,index) => {
+    console.log(`#${index + 1} = ${food}`);
+});
+
+console.log(mostPopularFood);
