@@ -33,18 +33,21 @@ console.log(desserts);
 
 let dessertCount = [];
 
-desserts.forEach(thing =>{
+//get an array of unique desserts, then can use that to match with values(hit this with the first foreach)
+let uniqueDess = [];
+
+desserts.forEach(dessert =>{
     let count = 0;
     for (i=0 ; i<desserts.length ; i++){
-        if (desserts[i] === thing){
+        if (desserts[i] === dessert){
             
             count ++;
         }
     }
-    console.log(`${count} x ${thing}`);
-    let entry = {type:thing, amount:count};
+    console.log(`${count} x ${dessert}`);
+    let entry = {type:dessert, amount:count};
     if ( !dessertCount.includes(entry.type)){
-    dessertCount.push({type:thing, amount:count})};
+    dessertCount.push({type:dessert, amount:count})};
 })
 
 console.log(dessertCount);
