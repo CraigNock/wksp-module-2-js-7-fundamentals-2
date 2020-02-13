@@ -29,14 +29,22 @@ var favoriteDessert = {
 //      ...
 
 let desserts = Object.values(favoriteDessert)
-console.log(desserts);
+// console.log(desserts);
+
+let uniqueDess = [];
+
+desserts.map(dish => {
+    if(!uniqueDess.includes(dish)){
+        uniqueDess.push(dish);
+    }
+})
+console.log(uniqueDess);
+
 
 let dessertCount = [];
 
-//get an array of unique desserts, then can use that to match with values(hit this with the first foreach)
-let uniqueDess = [];
 
-desserts.forEach(dessert =>{
+uniqueDess.forEach(dessert =>{
     let count = 0;
     for (i=0 ; i<desserts.length ; i++){
         if (desserts[i] === dessert){
@@ -44,17 +52,23 @@ desserts.forEach(dessert =>{
             count ++;
         }
     }
-    console.log(`${count} x ${dessert}`);
-    let entry = {type:dessert, amount:count};
-    if ( !dessertCount.includes(entry.type)){
+    // console.log(`${count} x ${dessert}`);
+    // let entry = {type:dessert, amount:count};
+    // if ( !dessertCount.includes(entry.type)){
     dessertCount.push({type:dessert, amount:count})};
-})
+}
 
 console.log(dessertCount);
-// dessertCount.sort((a, b) (a.thing > b.thing) ? 1 : -1);
+
+
+//sort by amount
+// dessertCount.sort((a, b) (a.thing > b.thing) ? 1 : -1); 
 // dessertCount.reverse();
 // console.log(dessertCount);
 
+dessertCount.for (i=0 ; i < dessertCount.length; i++) {
+    console.log(`#${i+1}${dessertCount[i].type}`);
+})
 
 // desserts.forEach(item => {
 //     desserts.forEach(type => {
