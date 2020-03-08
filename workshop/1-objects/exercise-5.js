@@ -15,16 +15,34 @@ const people = [
 // Add the object representing yourself to this array of people (if your
 // `name` key does not have the same "shape" as the ones above, make sure you
 // change it to look like these).
+let myPerson = {
+    name: {
+        first: 'Craig',
+        middle: 'Wallace',
+        last: 'Nockels',
+    },
+    age: 29
+}
 
-
+people.push(myPerson);
+console.log(people);
 //-------------------------------------------------
 
 // Exercise 5.1
 // ------------
 // Write a function that returns the average age of the `people` array.
 
+
+
 function avgAge(peopleArr) {
-    // Yuor code here
+    let sum = 0;
+    peopleArr.forEach(item => {
+        ages = item.age
+        sum += ages ;
+        console.log(sum);
+    })
+    let average = Math.floor(sum/peopleArr.length);
+    return average;
 }
 
 console.log(`Average age is ${avgAge(people)}.`);

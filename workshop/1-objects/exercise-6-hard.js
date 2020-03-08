@@ -28,6 +28,61 @@ var favoriteDessert = {
 //      2. <DESSERT_NAME>
 //      ...
 
+let desserts = Object.values(favoriteDessert)
+// console.log(desserts);
+
+let uniqueDess = [];
+
+desserts.map(dish => {
+    if(!uniqueDess.includes(dish)){
+        uniqueDess.push(dish);
+    }
+})
+console.log(uniqueDess);
+
+
+let dessertCount = [];
+
+
+uniqueDess.forEach(dessert =>{
+    let count = 0;
+    for (i=0 ; i<desserts.length ; i++){
+        if (desserts[i] === dessert){
+            
+            count ++;
+        }
+    }
+    // console.log(`${count} x ${dessert}`);
+    // let entry = {type:dessert, amount:count};
+    // if ( !dessertCount.includes(entry.type)){
+    dessertCount.push({type:dessert, amount:count})};
+}
+
+console.log(dessertCount);
+
+
+//sort by amount
+// dessertCount.sort((a, b) (a.thing > b.thing) ? 1 : -1); 
+// dessertCount.reverse();
+// console.log(dessertCount);
+
+dessertCount.for (i=0 ; i < dessertCount.length; i++) {
+    console.log(`#${i+1}${dessertCount[i].type}`);
+})
+
+// desserts.forEach(item => {
+//     desserts.forEach(type => {
+//         if (item === type){
+            
+//         }
+//     })
+// })
+
+
+
+
+
+
 
 // B)
 // The names of those that said the same desserts. Output the list in

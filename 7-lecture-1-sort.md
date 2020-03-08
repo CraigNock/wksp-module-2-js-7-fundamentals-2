@@ -10,6 +10,8 @@ const characters = ['Rick', 'Morty', 'Summer', 'Beth', 'Jerry'];
 characters.sort();
 
 // outcome?
+//goes by the ascii codes, capitals are different, not reeealy alphabetical.
+//so it'll sort alphabetical as long as all strings are uppercase or all are lowercase
 ```
 
 ---
@@ -34,6 +36,7 @@ const numbers = [123, 13, 12, 6, 76, 0, 9];
 numbers.sort();
 
 // outcome?
+0, 12 123 13 6 76 9
 ```
 
 ---
@@ -51,10 +54,16 @@ numbers.sort();
 
 ```js
 const numbers = [123, 13, 12, 6, 76, 0, 9];
-
+//puts lower one at lower index (smallest to biggest)
 numbers.sort((a, b) => a - b)
 
 // outcome?
+0 , 6 , 9, 12 etc
+
+//biggest to smallest
+numbers.sort((a, b) => a - b)
+
+
 ```
 
 ---
